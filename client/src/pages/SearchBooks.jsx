@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import { Container, Col, Form, Button, Card } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations';

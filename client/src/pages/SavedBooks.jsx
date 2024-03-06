@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, CardColumns, Card, Button } from 'react-bootstrap';
+import { Container, Card, Button } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
