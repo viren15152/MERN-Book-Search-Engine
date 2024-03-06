@@ -1,14 +1,18 @@
+
 // see SignupForm.js for comments
 import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { useMutation } from '@apollo/client'; // Import useMutation hook
 
-import { loginUser } from '../utils/API';
+import { LOGIN_USER } from '../utils/mutations'; // Assuming LOGIN_USER is a GraphQL mutation
 import Auth from '../utils/auth';
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+
+  const [loginUser, { error }] = useMutation(LOGIN_USER); // Use the LOGIN_USER mutation
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -26,13 +30,13 @@ const LoginForm = () => {
     }
 
     try {
-      const response = await loginUser(userFormData);
+      const { data } = await loginUser({ variables: userFormData }); // Execute the LOGIN_USER mutation
 
-      if (!response.ok) {
+      if (error) {
         throw new Error('something went wrong!');
       }
 
-      const { token, user } = await response.json();
+      const { token, user } = data.login; // Assuming the response structure from the mutation
       console.log(user);
       Auth.login(token);
     } catch (err) {
