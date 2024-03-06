@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "apollo-client": "^2.6.10",
+    "apollo-server-express": "^3.13.0",
     "graphql": "^15.8.0"
   }
 }
