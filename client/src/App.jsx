@@ -3,11 +3,11 @@ import { ApolloProvider } from '@apollo/client'; // Import ApolloProvider
 import { Outlet } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import { client } from './apollo'; 
+import { client } from './utils/apollo'; 
 
 function App() {
   return (
-    <ApolloProvider client={client}> {/* Wrap your component tree with ApolloProvider */}
+    <ApolloProvider client={client}> {}
       <>
         <Navbar />
         <Outlet />
