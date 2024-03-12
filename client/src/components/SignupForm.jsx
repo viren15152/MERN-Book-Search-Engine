@@ -35,10 +35,12 @@ const SignupForm = () => {
     }
 
     try {
+      console.log("Submitting form with data:", userFormData);
       const { data } = await addUser({ variables: { ...userFormData } });
+      console.log("Received data:", data);
       Auth.login(data.addUser.token);
     } catch (err) {
-      console.error(err);
+      console.error("Error submitting form:", err);
       setShowAlert(true);
     }
 
