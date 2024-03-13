@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignore connection.js file containing sensitive information
-connection.js
+# Ignore .env file containing sensitive information
+.env
