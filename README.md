@@ -17,6 +17,7 @@ This is a Book Search Engine application that makes use of Google Books API to c
 
 ## Visuals
 
+![Application Functioning](<Screenshot 2024-03-13 at 20.30.29.png>)
 
 ## Technologies Used
 
