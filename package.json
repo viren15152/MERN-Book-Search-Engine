@@ -18,7 +18,6 @@
     "concurrently": "^8.2.2"
   },
   "dependencies": {
-    "@apollo/server": "^4.10.1",
     "dotenv": "^16.4.5",
     "mongodb": "^6.5.0"
   }
