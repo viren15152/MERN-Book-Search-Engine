@@ -13,7 +13,7 @@
 
 ## Description
 
-This is a Book Search Engine application that makes use of Google Books API to create a graphql API with Apollo Server. MERN stack is implemented to create the app. Users can sign up and log in for an account, search for a book of their liking and add it to a list of saved books, users can also remove the saved books. 
+This is a book search engine application that makes use of Google Books API to create a graphql API with Apollo Server. MERN stack is implemented to create the app. Users can sign up and log in for an account, search for a book of their liking and add it to a list of saved books, users can also remove the saved books. 
 
 ## Visuals
 
